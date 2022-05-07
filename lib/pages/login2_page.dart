@@ -24,9 +24,37 @@ class Login2Page extends StatelessWidget {
                   ],
                 ),
               ),
+
+              Positioned(
+                bottom: -150,
+                left: -100,
+                child: MyCircleWidget(
+                  radius: 140,
+                  colors: [
+                    Color(0xff4E398B),
+                    Color(0xff9C89D9),
+                  ],
+                ),
+              ),
+
+              Positioned(
+                top: 80,
+                left: 30,
+                child: MyCircleWidget(
+                  radius: 20,
+                  colors: [
+                    Color(0xff4E398B),
+                    Color(0xff9C89D9),
+                  ],
+                ),
+              ),
+
             ],
           ),
           //Formulario
+
+
+
         ],
       ),
     );
