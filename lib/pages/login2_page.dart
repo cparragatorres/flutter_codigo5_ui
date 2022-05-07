@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_ui/constants.dart';
 
 class Login2Page extends StatelessWidget {
   const Login2Page({Key? key}) : super(key: key);
@@ -59,15 +60,34 @@ class Login2Page extends StatelessWidget {
                       const Text(
                         "Create Your Account!",
                         style: TextStyle(
-                          color: Color(0xff362274),
-                          fontSize: 38.0,
-                          fontWeight: FontWeight.bold
-                        ),
+                            color: kColorPrimaryLogin2,
+                            fontSize: 38.0,
+                            fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         decoration: InputDecoration(
                           hintText: "Email Address",
-                          prefixIcon: Icon(Icons.mail)
+                          hintStyle: TextStyle(
+                            fontSize: 14.0,
+                            color: kColorPrimaryLogin2.withOpacity(0.4),
+                            fontWeight: FontWeight.w500,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.mail,
+                            color: kColorPrimaryLogin2.withOpacity(0.70),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: kColorPrimaryLogin2.withOpacity(0.8),
+                              width: 1.4,
+                            ),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: kColorPrimaryLogin2.withOpacity(0.8),
+                              width: 1.4,
+                            ),
+                          ),
                         ),
                       ),
                     ],
