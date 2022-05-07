@@ -70,11 +70,32 @@ class ParkingPage extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: TextField(),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              hintText: "Find parking place",
+                              hintStyle: GoogleFonts.montserrat(
+                                  color: Colors.black38,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.w500),
+                              prefixIcon: Icon(
+                                Icons.search,
+                                color: Colors.black38,
+                                size: 20.0,
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                                borderSide: BorderSide.none,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                                borderSide: BorderSide.none,
+                              ),
+                            ),
+                          ),
                         ),
-                        Icon(
-                          Icons.filter_alt_outlined
-                        ),
+                        Icon(Icons.filter_alt_outlined),
                       ],
                     ),
                   ],
