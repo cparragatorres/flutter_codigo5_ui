@@ -16,7 +16,7 @@ class Login1Page extends StatelessWidget {
           Stack(
             children: [
               Positioned(
-                left: 40,
+                left: 36,
                 top: -40,
                 child: Transform.rotate(
                   angle: -pi / 3,
@@ -38,13 +38,20 @@ class Login1Page extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
               child: Column(
                 children: [
-                  Icon(
-                    Icons.home,
-                    color: Colors.white,
+                  const SizedBox(
+                    height: 50.0,
                   ),
-                  SvgPicture.asset(
-                    'assets/icons/bx-home.svg',
-                    color: Colors.white,
+                  Container(
+                    padding: const EdgeInsets.all(18.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: kColorSecondaryLogin.withOpacity(0.15),
+                    ),
+                    child: SvgPicture.asset(
+                      'assets/icons/bx-home.svg',
+                      color: kColorSecondaryLogin,
+                      height: 40,
+                    ),
                   ),
                 ],
               ),
