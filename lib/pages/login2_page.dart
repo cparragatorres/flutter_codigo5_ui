@@ -64,6 +64,9 @@ class Login2Page extends StatelessWidget {
                             fontSize: 38.0,
                             fontWeight: FontWeight.bold),
                       ),
+                      const SizedBox(
+                        height: 50.0,
+                      ),
                       TextField(
                         decoration: InputDecoration(
                           hintText: "Email Address",
@@ -74,6 +77,40 @@ class Login2Page extends StatelessWidget {
                           ),
                           prefixIcon: Icon(
                             Icons.mail,
+                            color: kColorPrimaryLogin2.withOpacity(0.70),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: kColorPrimaryLogin2.withOpacity(0.8),
+                              width: 1.4,
+                            ),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: kColorPrimaryLogin2.withOpacity(0.8),
+                              width: 1.4,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: "Password",
+                          hintStyle: TextStyle(
+                            fontSize: 14.0,
+                            color: kColorPrimaryLogin2.withOpacity(0.4),
+                            fontWeight: FontWeight.w500,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: kColorPrimaryLogin2.withOpacity(0.70),
+                          ),
+                          suffixIcon: Icon(
+                            Icons.remove_red_eye,
+                            size: 20,
                             color: kColorPrimaryLogin2.withOpacity(0.70),
                           ),
                           focusedBorder: UnderlineInputBorder(
