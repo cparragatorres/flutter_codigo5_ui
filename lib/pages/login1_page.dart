@@ -139,6 +139,81 @@ class Login1Page extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                      filled: true,
+                      fillColor: kColorTertiaryLogin,
+                      hintText: "Username",
+                      hintStyle: GoogleFonts.poppins(
+                        color: Colors.white60,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(14.0)
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0)
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                      filled: true,
+                      fillColor: kColorTertiaryLogin,
+                      hintText: "Email Address",
+                      hintStyle: GoogleFonts.poppins(
+                        color: Colors.white60,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0)
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0)
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                      filled: true,
+                      fillColor: kColorTertiaryLogin,
+                      hintText: "Password",
+                      hintStyle: GoogleFonts.poppins(
+                        color: Colors.white60,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0)
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0)
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
