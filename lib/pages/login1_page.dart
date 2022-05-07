@@ -77,6 +77,68 @@ class Login1Page extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
+                  const SizedBox(
+                    height: 40.0,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffEA4335),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          icon: SvgPicture.asset(
+                            'assets/icons/bx-google.svg',
+                            color: Colors.white,
+                            height: 17.0,
+                          ),
+                          label: Container(
+                            margin: const EdgeInsets.symmetric(vertical: 14.0),
+                            child: Text(
+                              "Google",
+                              style: GoogleFonts.poppins(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 18.0,
+                      ),
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xff1877F2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          icon: SvgPicture.asset(
+                            'assets/icons/bx-facebook.svg',
+                            color: Colors.white,
+                            height: 17.0,
+                          ),
+                          label: Container(
+                            margin: const EdgeInsets.symmetric(vertical: 14.0),
+                            child: Text(
+                              "Facebook",
+                              style: GoogleFonts.poppins(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
