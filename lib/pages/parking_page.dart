@@ -95,8 +95,32 @@ class ParkingPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Icon(Icons.filter_alt_outlined),
+                        const SizedBox(
+                          width: 14.0,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(15.0),
+                          decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            borderRadius: BorderRadius.circular(10.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomLeft,
+                              end: Alignment.topRight,
+                              colors: [
+                                Color(0xffFFB000),
+                                Color(0xffF9CB05),
+                              ],
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.filter_alt_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
                       ],
+                    ),
+                    const SizedBox(
+                      height: 12.0,
                     ),
                   ],
                 ),
