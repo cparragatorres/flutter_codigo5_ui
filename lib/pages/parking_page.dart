@@ -171,6 +171,7 @@ class ParkingPage extends StatelessWidget {
                     ],
                   ),
                   Container(
+                    width: 160.0,
                     child: Column(
                       children: [
                         // ClipRRect(
@@ -183,7 +184,6 @@ class ParkingPage extends StatelessWidget {
                         //   ),
                         // ),
                         Container(
-                          width: 160.0,
                           height: 120.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(14.0),
@@ -196,6 +196,61 @@ class ParkingPage extends StatelessWidget {
                                 color: Colors.black.withOpacity(0.07),
                                 blurRadius: 10,
                                 offset: const Offset(4, 4),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Blok C Benyamin asds asdsads ",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.montserrat(
+                                  color: kColorPrimaryParking,
+                                  fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "Jl. Kita Berduamk Lorem 232",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.montserrat(
+                                    color: kColorPrimaryParking.withOpacity(0.55),
+                                    fontWeight: FontWeight.w500,
+                                  fontSize: 13.0
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "Open ",
+                                    style: GoogleFonts.montserrat(
+                                        color: kColorTertiaryParking,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                      " 05:00 - 22:00",
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.montserrat(
+                                          color: kColorPrimaryParking.withOpacity(0.45),
+                                          fontWeight: FontWeight.w500
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
