@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class Login2Page extends StatelessWidget {
@@ -24,7 +23,6 @@ class Login2Page extends StatelessWidget {
                   ],
                 ),
               ),
-
               Positioned(
                 bottom: -150,
                 left: -100,
@@ -36,7 +34,6 @@ class Login2Page extends StatelessWidget {
                   ],
                 ),
               ),
-
               Positioned(
                 top: 80,
                 left: 30,
@@ -48,23 +45,44 @@ class Login2Page extends StatelessWidget {
                   ],
                 ),
               ),
-
             ],
           ),
           //Formulario
-
-
-
+          SafeArea(
+            child: Center(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Create Your Account!",
+                        style: TextStyle(
+                          color: Color(0xff362274),
+                          fontSize: 38.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: "Email Address",
+                          prefixIcon: Icon(Icons.mail)
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
-
-
 class MyCircleWidget extends StatelessWidget {
-
   double radius;
   List<Color> colors;
 
