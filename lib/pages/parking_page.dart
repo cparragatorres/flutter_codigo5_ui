@@ -136,11 +136,11 @@ class ParkingPage extends StatelessWidget {
                 ),
               ),
             ),
-
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 14.0, vertical: 26.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -171,26 +171,72 @@ class ParkingPage extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                 const SizedBox(
-                   height: 22,
-                 ),
-                 SingleChildScrollView(
-                   scrollDirection: Axis.horizontal,
-                   physics: BouncingScrollPhysics(),
-                   child: Row(
-                     children: [
-                       ItemSliderWidget(),
-                       ItemSliderWidget(),
-                       ItemSliderWidget(),
-                       ItemSliderWidget(),
-                       ItemSliderWidget(),
-                       ItemSliderWidget(),
-                     ],
-                   ),
-                 ),
-
-
+                  const SizedBox(
+                    height: 22,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
+                    child: Row(
+                      children: [
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                        ItemSliderWidget(),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  Text(
+                    "History Parking",
+                    style: GoogleFonts.montserrat(
+                      color: kColorPrimaryParking,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Container(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/car.png',
+                          width: 54,
+                        ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Blok A Sarimi",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              Text(
+                                "Av. Gonzales Prada 232 1",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              "05, Sep 2022",
+                            ),
+                            Text(
+                              "S/.30.00",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -240,7 +286,8 @@ class ItemSliderWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -249,9 +296,7 @@ class ItemSliderWidget extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.montserrat(
-                    color: kColorPrimaryParking,
-                    fontWeight: FontWeight.w600
-                  ),
+                      color: kColorPrimaryParking, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(
                   height: 5.0,
@@ -263,8 +308,7 @@ class ItemSliderWidget extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                       color: kColorPrimaryParking.withOpacity(0.55),
                       fontWeight: FontWeight.w500,
-                    fontSize: 13.0
-                  ),
+                      fontSize: 13.0),
                 ),
                 const SizedBox(
                   height: 5.0,
@@ -275,8 +319,7 @@ class ItemSliderWidget extends StatelessWidget {
                       "Open ",
                       style: GoogleFonts.montserrat(
                           color: kColorTertiaryParking,
-                          fontWeight: FontWeight.w600
-                      ),
+                          fontWeight: FontWeight.w600),
                     ),
                     Expanded(
                       child: Text(
@@ -285,8 +328,7 @@ class ItemSliderWidget extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.montserrat(
                             color: kColorPrimaryParking.withOpacity(0.45),
-                            fontWeight: FontWeight.w500
-                        ),
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ],
