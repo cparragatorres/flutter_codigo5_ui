@@ -127,6 +127,42 @@ class Login2Page extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const SizedBox(
+                        height: 50.0,
+                      ),
+
+                      Container(
+                        height: 58.0,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(40.0),
+                          gradient: LinearGradient(
+                            begin: Alignment.centerRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Color(0xffD9488A),
+                              Color(0xffD780A7),
+                            ],
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xffD9488A).withOpacity(0.75),
+                              offset: const Offset(6, 6),
+                              blurRadius: 20.0
+                            ),
+                          ]
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Create Account",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+
                     ],
                   ),
                 ),
