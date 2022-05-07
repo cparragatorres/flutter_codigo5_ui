@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_ui/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ParkingPage extends StatelessWidget {
@@ -22,7 +23,7 @@ class ParkingPage extends StatelessWidget {
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
                   colors: [
-                    Color(0xff05172A),
+                    kColorPrimaryParking,
                     Color(0xff09494F),
                   ],
                 ),
@@ -116,7 +117,7 @@ class ParkingPage extends StatelessWidget {
                               begin: Alignment.bottomLeft,
                               end: Alignment.topRight,
                               colors: [
-                                Color(0xffFFB000),
+                                kColorSecondaryParking,
                                 Color(0xffF9CB05),
                               ],
                             ),
@@ -135,19 +136,75 @@ class ParkingPage extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Parking Near You",
-                ),
-                Row(
-                  children: [
-                    Text("View More",),
-                    Icon(Icons.arrow_forward,),
-                  ],
-                ),
-              ],
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 14.0, vertical: 26.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Parking Near You",
+                        style: GoogleFonts.montserrat(
+                          color: kColorPrimaryParking,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "View More",
+                            style: GoogleFonts.montserrat(
+                                color: kColorSecondaryParking,
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          const Icon(
+                            Icons.arrow_forward,
+                            color: kColorSecondaryParking,
+                            size: 16.0,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Container(
+                    child: Column(
+                      children: [
+                        // ClipRRect(
+                        //   borderRadius: BorderRadius.circular(14.0),
+                        //   child: Image.asset(
+                        //     'assets/images/maps.png',
+                        //     width: 160.0,
+                        //     height: 120.0,
+                        //     fit: BoxFit.cover,
+                        //   ),
+                        // ),
+                        Container(
+                          width: 160.0,
+                          height: 120.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14.0),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/images/maps.png'),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.07),
+                                blurRadius: 10,
+                                offset: const Offset(4, 4),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
