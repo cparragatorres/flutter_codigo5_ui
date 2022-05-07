@@ -199,49 +199,109 @@ class ParkingPage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/car.png',
-                          width: 54,
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Blok A Sarimi",
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              Text(
-                                "Av. Gonzales Prada 232 1",
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              "05, Sep 2022",
-                            ),
-                            Text(
-                              "S/.30.00",
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  const SizedBox(
+                    height: 10.0,
                   ),
+                  ItemHistoryWidget(),
+                  ItemHistoryWidget(),
+                  ItemHistoryWidget(),
+                  ItemHistoryWidget(),
+                  ItemHistoryWidget(),
+
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ItemHistoryWidget extends StatelessWidget {
+  const ItemHistoryWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            offset: const Offset(4,4),
+            blurRadius: 12.0,
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/images/car.png',
+            width: 52,
+          ),
+          const SizedBox(
+            width: 12.0,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Blok A Sarimi",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.montserrat(
+                    color: kColorPrimaryParking,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(
+                  height: 7.0,
+                ),
+                Text(
+                  "Av. Gonzales Prada 232 1",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.montserrat(
+                    color: kColorPrimaryParking.withOpacity(0.45),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12.0
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                "05, Sep 2022",
+                style: GoogleFonts.montserrat(
+                    color: kColorPrimaryParking.withOpacity(0.45),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12.0
+                ),
+              ),
+              const SizedBox(
+                height: 7.0,
+              ),
+              Text(
+                "S/.30.00",
+                style: GoogleFonts.montserrat(
+                    color: kColorTertiaryParking,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 13.0
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
