@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_ui/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login1Page extends StatelessWidget {
   const Login1Page({Key? key}) : super(key: key);
@@ -37,6 +38,7 @@ class Login1Page extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
                     height: 50.0,
@@ -51,6 +53,28 @@ class Login1Page extends StatelessWidget {
                       'assets/icons/bx-home.svg',
                       color: kColorSecondaryLogin,
                       height: 40,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 34,
+                  ),
+                  Text(
+                    "Let's log you in",
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    "Welcome back You've been missed!",
+                    style: GoogleFonts.poppins(
+                      color: Colors.white38,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
