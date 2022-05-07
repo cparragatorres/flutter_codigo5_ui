@@ -17,7 +17,7 @@ class Login2Page extends StatelessWidget {
                 height: 300,
                 width: 300,
                 decoration: BoxDecoration(
-                  color: Colors.pink,
+                  color: Colors.pinkAccent,
                 ),
               ),
             ],
