@@ -17,7 +17,16 @@ class ParkingPage extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
               width: double.infinity,
-              color: Color(0xff0A494E),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topLeft,
+                  colors: [
+                    Color(0xff05172A),
+                    Color(0xff09494F),
+                  ],
+                ),
+              ),
               child: SafeArea(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,6 +134,20 @@ class ParkingPage extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Parking Near You",
+                ),
+                Row(
+                  children: [
+                    Text("View More",),
+                    Icon(Icons.arrow_forward,),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
