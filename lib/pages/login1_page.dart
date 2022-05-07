@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_ui/constants.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Login1Page extends StatelessWidget {
   const Login1Page({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class Login1Page extends StatelessWidget {
                 left: 40,
                 top: -40,
                 child: Transform.rotate(
-                  angle: - pi / 3,
+                  angle: -pi / 3,
                   child: Container(
                     width: 200,
                     height: 60,
@@ -33,11 +34,18 @@ class Login1Page extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
               child: Column(
                 children: [
-                  Icon(Icons.home, color: Colors.white,),
-
+                  Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  SvgPicture.asset(
+                    'assets/icons/bx-home.svg',
+                    color: Colors.white,
+                  ),
                 ],
               ),
             ),
