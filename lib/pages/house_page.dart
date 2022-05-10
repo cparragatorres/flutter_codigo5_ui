@@ -168,7 +168,17 @@ class HousePage extends StatelessWidget {
                     Container(
                       width: 200,
                       padding: const EdgeInsets.all(9.0),
-                      color: Colors.greenAccent,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.04),
+                            offset: const Offset(4, 4),
+                            blurRadius: 12.0,
+                          ),
+                        ],
+                      ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -212,6 +222,37 @@ class HousePage extends StatelessWidget {
                                     ),
                                   ),
                                 ],
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text("\$743"),
+                                        Text("/Month"),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                        ),
+                                        Expanded(
+                                          child: Text(
+                                            "Padamara, Jawa Tengah",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Icon(
+                                Icons.bookmark_rounded,
                               ),
                             ],
                           ),
