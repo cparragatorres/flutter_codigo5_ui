@@ -233,7 +233,7 @@ class HousePage extends StatelessWidget {
                                     Row(
                                       children: [
                                         Text("\$743"),
-                                        Text("/Month"),
+                                        Text("/Monthh"),
                                       ],
                                     ),
                                     Row(
