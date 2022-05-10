@@ -50,11 +50,39 @@ class HousePage extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(10.0)
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.03),
+                            offset: const Offset(4, 4),
+                            blurRadius: 14.0
+                          ),
+                        ],
                       ),
-                      child: Icon(
-                        Icons.notifications,
+                      child: Stack(
+                        children: [
+                          Icon(
+                            Icons.notifications,
+                            color: Colors.black.withOpacity(0.25),
+                          ),
+                          Positioned(
+                            top: 2,
+                            right: 2,
+                            child: Container(
+                              height: 9,
+                              width: 9,
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 1.2
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
