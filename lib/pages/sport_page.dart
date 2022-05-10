@@ -104,6 +104,27 @@ class SportPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Categorías",
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 17.0,
+                      ),
+                    ),
+                    Text(
+                      "Ver más",
+                      style: GoogleFonts.poppins(
+                        decoration: TextDecoration.underline
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
