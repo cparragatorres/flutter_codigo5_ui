@@ -13,6 +13,7 @@ class HousePage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,38 +123,70 @@ class HousePage extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10,),
-                      decoration: BoxDecoration(
-                        color: Color(0xffEFF4FD),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/images/building.png',
-                            height: 22.0,
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          Text(
-                            "House",
-                            style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                Text(
+                  "Category",
+                  style: GoogleFonts.montserrat(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16.0,
+                  ),
+                ),
+                const SizedBox(
+                  height: 14.0,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ItemMenuWidget(),
+                      ItemMenuWidget(),
+                      ItemMenuWidget(),
+                      ItemMenuWidget(),
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ItemMenuWidget extends StatelessWidget {
+  const ItemMenuWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12.0,
+        vertical: 10,
+      ),
+      margin: const EdgeInsets.only(right: 14.0),
+      decoration: BoxDecoration(
+        color: Color(0xffEFF4FD),
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/images/building.png',
+            height: 22.0,
+          ),
+          const SizedBox(
+            width: 8.0,
+          ),
+          Text(
+            "House",
+            style: GoogleFonts.montserrat(
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
       ),
     );
   }
