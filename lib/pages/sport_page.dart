@@ -120,10 +120,57 @@ class SportPage extends StatelessWidget {
                     Text(
                       "Ver más",
                       style: GoogleFonts.poppins(
-                        decoration: TextDecoration.underline
-                      ),
+                          decoration: TextDecoration.underline),
                     ),
                   ],
+                ),
+                GridView.count(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  childAspectRatio: 2.5,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0, vertical: 12.0,),
+                      margin: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 6,),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.04),
+                            blurRadius: 10,
+                            offset: const Offset(4, 4),
+                          ),
+                        ]
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/swimming.png',
+                          ),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            "Swimming",
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 13.0
+                            ),
+
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      color: Colors.purple,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 100,
                 ),
               ],
             ),
