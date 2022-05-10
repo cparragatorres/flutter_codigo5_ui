@@ -124,48 +124,46 @@ class SportPage extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 16.0,
+                ),
                 GridView.count(
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 2,
                   childAspectRatio: 2.5,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12.0, vertical: 12.0,),
-                      margin: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 6,),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.04),
-                            blurRadius: 10,
-                            offset: const Offset(4, 4),
-                          ),
-                        ]
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/images/swimming.png',
-                          ),
-                          const SizedBox(
-                            width: 10.0,
-                          ),
-                          Text(
-                            "Swimming",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 13.0
-                            ),
-
-                          ),
-                        ],
-                      ),
+                    ItemGridWidget(
+                      text: "Swimming",
+                      image: "swimming",
                     ),
-                    Container(
-                      color: Colors.purple,
+                    ItemGridWidget(
+                      text: "Basketball",
+                      image: "basketball",
+                    ),
+                    ItemGridWidget(
+                      text: "Football",
+                      image: "football",
+                    ),
+                    ItemGridWidget(
+                      text: "Boxing",
+                      image: "boxing",
+                    ),
+                    ItemGridWidget(
+                      text: "Swimming",
+                      image: "swimming",
+                    ),
+                    ItemGridWidget(
+                      text: "Basketball",
+                      image: "basketball",
+                    ),
+                    ItemGridWidget(
+                      text: "Football",
+                      image: "football",
+                    ),
+                    ItemGridWidget(
+                      text: "Boxing",
+                      image: "boxing",
                     ),
                   ],
                 ),
@@ -176,6 +174,52 @@ class SportPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ItemGridWidget extends StatelessWidget {
+
+  String text;
+  String image;
+
+  ItemGridWidget({required this.text, required this.image,});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+          horizontal: 12.0, vertical: 12.0,),
+      margin: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 6,),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.04),
+            blurRadius: 10,
+            offset: const Offset(4, 4),
+          ),
+        ]
+      ),
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/images/$image.png',
+          ),
+          const SizedBox(
+            width: 10.0,
+          ),
+          Text(
+            text,
+            style: GoogleFonts.poppins(
+              fontWeight: FontWeight.w500,
+              fontSize: 13.0
+            ),
+
+          ),
+        ],
       ),
     );
   }
