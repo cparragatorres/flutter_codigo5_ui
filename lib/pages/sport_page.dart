@@ -34,8 +34,62 @@ class SportPage extends StatelessWidget {
                 Text(
                   "Welcome back!",
                   style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600
+                      fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 230.0,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        "https://images.pexels.com/photos/949126/pexels-photo-949126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                      ),
+                    ),
+                  ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.8),
+                              Colors.transparent,
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                              maxLines: 2,
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 6.0,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Regístrate Ahora",
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
