@@ -167,6 +167,7 @@ class HousePage extends StatelessWidget {
                   children: [
                     Container(
                       width: 200,
+                      padding: const EdgeInsets.all(9.0),
                       color: Colors.greenAccent,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,6 +181,9 @@ class HousePage extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
                           Row(
                             children: [
                               Expanded(
@@ -187,12 +191,26 @@ class HousePage extends StatelessWidget {
                                   "Minimalist House sdsdsd asdsd",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
+                                  style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 13.0,
+                                  ),
                                 ),
                               ),
                               Row(
                                 children: [
-                                  Icon(Icons.star,),
-                                  Text("4.5",),
+                                  Icon(
+                                    Icons.star,
+                                    size: 14.0,
+                                    color: Color(0xffFBBF12),
+                                  ),
+                                  Text(
+                                    "4.5",
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 13.0,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
