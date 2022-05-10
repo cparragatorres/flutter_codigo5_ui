@@ -138,12 +138,69 @@ class HousePage extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Row(
                     children: [
-                      ItemMenuWidget(),
-                      ItemMenuWidget(),
-                      ItemMenuWidget(),
-                      ItemMenuWidget(),
+                      ItemMenuWidget(
+                        text: "House",
+                      ),
+                      ItemMenuWidget(
+                        text: "Hotel",
+                      ),
+                      ItemMenuWidget(
+                        text: "Apartment",
+                      ),
                     ],
                   ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "Recomendation",
+                  style: GoogleFonts.montserrat(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16.0,
+                  ),
+                ),
+                const SizedBox(
+                  height: 14.0,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 200,
+                      color: Colors.greenAccent,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(14.0),
+                            child: Image.network(
+                              'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                              width: 200,
+                              height: 110,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  "Minimalist House sdsdsd asdsd",
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,),
+                                  Text("4.5",),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -155,9 +212,10 @@ class HousePage extends StatelessWidget {
 }
 
 class ItemMenuWidget extends StatelessWidget {
-  const ItemMenuWidget({
-    Key? key,
-  }) : super(key: key);
+  String text;
+  ItemMenuWidget({
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -181,7 +239,7 @@ class ItemMenuWidget extends StatelessWidget {
             width: 8.0,
           ),
           Text(
-            "House",
+            text,
             style: GoogleFonts.montserrat(
               fontWeight: FontWeight.w500,
             ),
