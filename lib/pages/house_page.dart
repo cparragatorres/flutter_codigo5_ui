@@ -103,8 +103,7 @@ class HousePage extends StatelessWidget {
                       fillColor: Colors.white,
                       hintText: "Search",
                       hintStyle: GoogleFonts.montserrat(
-                        color: Colors.black.withOpacity(0.4)
-                      ),
+                          color: Colors.black.withOpacity(0.4)),
                       suffixIcon: Icon(
                         Icons.search,
                         color: Colors.black.withOpacity(0.4),
@@ -119,6 +118,37 @@ class HousePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10,),
+                      decoration: BoxDecoration(
+                        color: Color(0xffEFF4FD),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/building.png',
+                            height: 22.0,
+                          ),
+                          const SizedBox(
+                            width: 8.0,
+                          ),
+                          Text(
+                            "House",
+                            style: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
